@@ -24,6 +24,12 @@ public class ItemController {
         return ResponseEntity.ok(repository.save(item));
     }
 
+
+    @GetMapping("/")
+    public String home() {
+        return "Assignment API is running successfully 🚀";
+    }
+
     // Get item by ID
     @GetMapping("/{id}")
     public ResponseEntity<Item> getItem(@PathVariable Long id) {
