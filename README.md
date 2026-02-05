@@ -23,13 +23,10 @@ Each item has:
 
 ### RESTful API Endpoints
 
-| Endpoint        | Method | Description                    |
-|-----------------|--------|--------------------------------|
-| `/items`        | POST   | Add a new item                 |
-| `/items/{id}`   | GET    | Get a single item by ID        |
-| `/items`        | GET    | Get all items (optional)       |
-| `/items/{id}`   | DELETE | Delete an item by ID (optional)|
-| `/items/{id}`   | PUT    | Update an item by ID (optional)|
+| Endpoint      | Method | Description              |
+|---------------|--------|--------------------------|
+| `/items`      | POST   | Add a new item           |
+| `/items/{id}` | GET    | Get a single item by ID  |
 
 ### Input Validation
 - Required fields must be present.  
@@ -38,6 +35,8 @@ Each item has:
 ---
 
 ## Project Structure
+
+
 
 src/
 ├── main/
@@ -50,6 +49,7 @@ src/
 │ └── application.properties
 
 
+
 ---
 
 ## Requirements
@@ -59,25 +59,25 @@ src/
 
 ---
 
-## How to Run
-
-1. **Clone the repo:**  
-```bash
-git clone <repo-link>
-cd <project-folder>
-Build using Maven:
+2 .Build the project using Maven:
 
 mvn clean install
-Run the app:
+
+
+3 . Run the application:
 
 mvn spring-boot:run
-Test the API:
+
+
+4 .Test the API:
 
 Base URL: http://localhost:8080/items
 
-Use Postman or browser to test endpoints.
+Use Postman or browser to test endpoint
+
 
 Example Requests
+
 Add Item (POST /items):
 
 {
@@ -85,6 +85,8 @@ Add Item (POST /items):
   "name": "Sample Item",
   "description": "This is a sample item."
 }
+
+
 Get Item (GET /items/1):
 
 {
@@ -92,7 +94,9 @@ Get Item (GET /items/1):
   "name": "Sample Item",
   "description": "This is a sample item."
 }
-Notes
-Data is in-memory, lost when app stops.
 
-Can be hosted on Vercel, Netlify, or Heroku for demo.
+Notes
+
+Data is in-memory, lost when the application stops.
+
+Can be hosted on Vercel, Netlify, or Heroku for demo purposes.
